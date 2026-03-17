@@ -1,0 +1,24 @@
+{
+  "name": "dokumentacemu",
+  "version": "1.0.0",
+  "description": "documentation for Multi-Uploader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvoFaltus/MU_documentation.git"
+  },
+  "author": "Ivo Faltus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IvoFaltus/MU_documentation/issues"
+  },
+  "homepage": "https://github.com/IvoFaltus/MU_documentation#readme",
+  "dependencies": {
+    "ejs": "^5.0.1",
+    "express": "^5.2.1"
+  }
+}
