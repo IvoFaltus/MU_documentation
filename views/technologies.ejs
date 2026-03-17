@@ -1,13 +1,71 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multiuploader | Technologies</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; color: #1d1b16; background: #f7f6f2; }
+    header { background: #1d1b16; color: #f7f6f2; padding: 20px 24px; }
+    nav a { color: #f7f6f2; margin-right: 14px; text-decoration: none; font-size: 14px; }
+    main { max-width: 900px; margin: 0 auto; padding: 24px; }
+    ul { padding-left: 18px; }
+    p { line-height: 1.6; }
+    h2 { margin-top: 24px; }
+  </style>
 </head>
 <body>
-    
+  <header>
+    <strong>Multiuploader</strong>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/features">Features</a>
+      <a href="/why">Why</a>
+      <a href="/technologies">Technologies</a>
+      <a href="/getting-started">Getting Started</a>
+      <a href="/contact">Contact / Git</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Technologies</h1>
+    <ul>
+      <li>Three.js for 360° interactive background (with example screenshot)</li>
+      <li>Django backend for API, authentication, database management</li>
+      <li>Chrome Extension for frontend automation (background & content scripts)</li>
+      <li>Diagrams of data flow between Django, extension, and target sites</li>
+    </ul>
 
-    <h1>technologies</h1>
+    <h2>Three.js</h2>
+    <p>Used initially for rendering a 360° interactive background on the main upload page. It enabled immersive visuals and allowed for complex camera movements and scene interactions.</p>
+    <p><strong>Limitations encountered:</strong></p>
+    <ul>
+      <li>Integration with vanilla JavaScript made state management complex.</li>
+      <li>UI updates (like showing upload progress or interacting with forms) were difficult to synchronize with the 3D scene.</li>
+      <li>Dynamic DOM updates often caused re-rendering glitches or frame drops.</li>
+    </ul>
+
+    <h2>Django</h2>
+    <p>Backend framework responsible for handling file uploads securely, managing user sessions and authentication (if required), serving static files (including the Three.js assets and frontend scripts), and exposing API endpoints for file status, progress, and history.</p>
+    <p>Django templates were used initially for rendering pages, but combining these with Three.js dynamic interactions led to maintenance complexity.</p>
+
+    <h2>Chrome Extension</h2>
+    <p>Acts as a bridge for automating uploads directly to specific platforms (e.g., auction sites).</p>
+    <p><strong>Scripts used:</strong></p>
+    <ul>
+      <li><strong>content.js</strong> – collects listing or form data from pages.</li>
+      <li><strong>background.js</strong> – communicates with the extension popup and opens target URLs.</li>
+      <li><strong>aukroContent.js</strong> – fills form fields dynamically using DOM events.</li>
+    </ul>
+    <p><strong>Challenge:</strong> Coordinating extension scripts with a dynamic Three.js front-end was cumbersome.</p>
+
+    <h2>JavaScript & Vanilla Frontend</h2>
+    <p>Originally, the frontend used plain JS and HTML/CSS, manipulating the DOM directly.</p>
+    <p><strong>Problems observed:</strong></p>
+    <ul>
+      <li>Complexity when combining 3D canvas, file upload forms, and dynamic UI elements.</li>
+      <li>Lack of structured state management for asynchronous file upload processes.</li>
+      <li>Difficulties with component reusability and maintainability.</li>
+    </ul>
+  </main>
 </body>
 </html>
