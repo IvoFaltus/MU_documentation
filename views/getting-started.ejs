@@ -4,32 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Multiuploader | Getting Started</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; color: #1d1b16; background: #f7f6f2; }
-    header { background: #1d1b16; color: #f7f6f2; padding: 20px 24px; }
-    nav a { color: #f7f6f2; margin-right: 14px; text-decoration: none; font-size: 14px; }
-    main { max-width: 900px; margin: 0 auto; padding: 24px; }
-    p { line-height: 1.6; }
-  </style>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
   <header>
-    <strong>Multiuploader</strong>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/features">Features</a>
-      <a href="/why">Why</a>
-      <a href="/technologies">Technologies</a>
-      <a href="/getting-started">Getting Started</a>
-      <a href="/contact">Contact / Git</a>
-    </nav>
+    <div class="nav">
+      <div class="brand"><span class="brand-badge">MU</span> Multiuploader</div>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/features">Features</a>
+        <a href="/why">Why</a>
+        <a href="/technologies">Technologies</a>
+        <a href="/getting-started">Getting Started</a>
+        <a href="/contact">Contact / Git</a>
+      </nav>
+    </div>
   </header>
   <main>
-    <h1>Getting Started</h1>
-    <p><strong>Installation guide:</strong> Install the Multiuploader Chrome extension and connect your account to the Django backend.</p>
-    <p><strong>Configuration:</strong> Set marketplace credentials, create upload profiles, and define field mappings for each target platform.</p>
-    <p><strong>Upload workflow example:</strong> Choose files → map fields → run bulk upload → monitor status and history.</p>
-    <p><strong>Note:</strong> The backend manages file status and progress, while the extension handles platform-specific form automation.</p>
+    <section>
+      <h1>Getting Started</h1>
+      <p><strong>Installation guide:</strong> Install the Multiuploader Chrome extension and connect your account to the Django backend.</p>
+      <p><strong>Configuration:</strong> Set marketplace credentials, create upload profiles, and define field mappings for each target platform.</p>
+      <p><strong>Upload workflow example:</strong> Choose files → map fields → run bulk upload → monitor status and history.</p>
+      <p><strong>Note:</strong> The backend manages file status and progress, while the extension handles platform-specific form automation.</p>
+    </section>
   </main>
 </body>
 </html>
